@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1043939757309",
+    "project_id": "push-notifications-bd91c",
+    "storage_bucket": "push-notifications-bd91c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043939757309:android:066a9025df639028cf4294",
+        "android_client_info": {
+          "package_name": "com.example.conecta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBRoA7nBZhUzjnhgPweffy4QUhOX8FiEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043939757309:android:f594868a6ca9afdacf4294",
+        "android_client_info": {
+          "package_name": "com.miguelviloria.conecta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBRoA7nBZhUzjnhgPweffy4QUhOX8FiEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
