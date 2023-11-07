@@ -48,7 +48,7 @@ class NotificationService {
   }
 
   Future<void> sendNotificationToApi(Map<String, dynamic> notificationData) async {
-    const apiUrl = 'https://api-laravel-pearl.vercel.app/notification';
+    const apiUrl = 'https://api-laravel-pearl.vercel.app/newNotification';
     final headers = <String, String>{
       'Content-Type': 'application/json',
     };

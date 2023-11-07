@@ -4,6 +4,7 @@ import 'package:conecta/pages/notification_page.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import '../services/notification_service.dart';
+import 'token_manager.dart';
 
 Future<void>handleBackgroundMessage(RemoteMessage message)async{
   print('Title in handleBackgroundMessage: ${message.notification?.title}');
@@ -104,6 +105,7 @@ class FirebaseApi {
   Future<void> initNotification() async {
     await _firebaseMessaging.requestPermission();
     final fCMToken =  await _firebaseMessaging.getToken();
+    FCMTokenManager.instance.setToken(fCMToken!);
     print('Token: $fCMToken');
     initPushNotifications();
     initLocalNotifications();

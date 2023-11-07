@@ -1,12 +1,15 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import '../api/token_manager.dart';
 
 class AuthService {
 
   DateTime? lastLogin;
+  final token = FCMTokenManager.instance.token;
 
   Future<Map<String, dynamic>> login(String username, String password) async {
     const apiUrl = 'https://api-laravel-pearl.vercel.app/login';
+    
 
     final response = await http.post(
       Uri.parse(apiUrl),
@@ -16,6 +19,7 @@ class AuthService {
       body: jsonEncode({
         'email': username,
         'password': password,
+        'fcmtoken': token
       }),
     );
 
@@ -42,6 +46,7 @@ class AuthService {
       body: jsonEncode({
         'email': username,
         'password': password,
+        'fcmtoken': token
       }),
     );
 
@@ -54,7 +59,6 @@ class AuthService {
   }
 
   DateTime? getLastLogin() {
-    print('lastLogin ---------------- ${lastLogin}');
     return lastLogin;
   }
 
